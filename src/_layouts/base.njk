@@ -39,9 +39,5 @@
 
     {% include "footer.njk" %}
   </div>
-
-  <script>
-    "use strict";function onBlur(e,r){return function(o){""!==o.target.value?o.target.className=e:o.target.className=e+r}}function onSubmit(e){const r=document.querySelector(".js-fname"),o=document.querySelector(".js-email");if(!r.value||!o.value){e.preventDefault();const n=r.className,a=o.className;r.className=n+" border border-danger border-3",o.className=a+" border border-danger border-3"}r.value&&(r.className="required form-control js-fname"),o.value&&(o.className="required email form-control js-email"),r.addEventListener("blur",onBlur("required form-control js-fname"," border border-danger border-3")),o.addEventListener("blur",onBlur("required email form-control js-email"," border border-danger border-3"))}function checkForm(){document.querySelector(".js-signup-form").addEventListener("submit",onSubmit)}document.addEventListener("DOMContentLoaded",checkForm);
-  </script>
 </body>
 </html>
