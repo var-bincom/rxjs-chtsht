@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RxJS Cheat Sheet</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="keywords" content="RxJS, JavaScript, rx, reactive programming, js" />
+  <meta name="description" content="Everything you need to know before going to dive into RxJS world" />
+  <meta name="image" content="https://rxjs-chtsht.com/assets/images/min/meta-image.min.jpeg" />
+  <meta property="og:url" content="https://rxjs-chtsht.com" />
+  <meta property="og:title" content="RxJS Cheat Sheet | Dive into RxJS world" />
+  <meta property="og:description" content="Everything you need to know before going to dive into RxJS world" />
+  <meta property="og:image" content="https://rxjs-chtsht.com/assets/images/min/meta-image.min.jpeg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RxJS Cheat Sheet | Dive into RxJS world" />
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:creator" content="@var_bincom" />
+  <meta name="twitter:title" content="RxJS Cheat Sheet | Dive into RxJS world" />
+  <meta name="twitter:description" content="Everything you need to know before going to dive into RxJS world" />
+  <meta name="twitter:image" content="https://rxjs-chtsht.com/assets/images/min/meta-image.min.jpeg" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PBFW9L49Z"></script>
+  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-1PBFW9L49Z');</script>
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <h3 class="mb-0">
+          <div class="logo-wrapper d-flex">
+            <img src="assets/images/logo2.svg" alt="RxJS Cheat Sheet Logo" class="logo__image me-2"/>
+          </div>
+        </h3>
+      </div>
+    </header>
+
+    <main>
+      <div class="content-wrapper d-flex text-start">
+        <div class="content__text py-2">
+          <h1>RxJS Cheat Sheet</h1>
+          <p class="lead">Everything you need to know before going to dive into RxJS world</p>
+        </div>
+
+        <div class="content__signup-form py-3">
+          <div id="mc_embed_signup">
+            <form
+              action="https://gmail.us1.list-manage.com/subscribe/post?u=7accc9b7f018fb5ae1e19e6ad&amp;id=f0438e2c06"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              class="validate js-signup-form"
+              target="_blank"
+              novalidate
+            >
+              <div
+                id="mc_embed_signup_scroll"
+                class="signup-form d-flex flex-column justify-content-between"
+              >
+                <h3 class="mb-4">
+                  Signup for updates
+                </h3>
+                <div class="mc-field-group mb-3">
+                  <label for="mce-FNAME" class="form-label">First Name <span class="asterisk text-danger">*</span></label>
+                  <input
+                    type="text"
+                    value=""
+                    name="FNAME"
+                    class="required form-control js-fname"
+                    id="mce-FNAME"
+                    placeholder="John"
+                    required
+                  >
+                </div>
+                <div class="mc-field-group mb-3">
+                  <label for="mce-EMAIL" class="form-label">Email <span class="asterisk text-danger">*</span></label>
+                  <input
+                    type="email"
+                    value=""
+                    name="EMAIL"
+                    class="required email form-control js-email"
+                    id="mce-EMAIL"
+                    placeholder="john@example.com"
+                    required
+                  >
+                </div>
+                <div id="mce-responses">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_7accc9b7f018fb5ae1e19e6ad_f0438e2c06" tabindex="-1" value="">
+                </div>
+                <div>
+                  <input
+                    type="submit"
+                    value="Signup"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    class="btn btn-warning signup-form__button js-submit-button"
+                  >
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-auto text-white-50">
+      <p class="mb-0">
+        Made with <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 24 24" width="18" fill="#fff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.71c0 3.83 2.95 7.18 6.78 7.29 3.96.12 7.22-3.06 7.22-7v-1h.5c1.93 0 3.5-1.57 3.5-3.5S20.43 3 18.5 3zM16 5v3H6V5h10zm2.5 3H18V5h.5c.83 0 1.5.67 1.5 1.5S19.33 8 18.5 8zM4 19h16v2H4v-2z"/></svg> by <a href="https://twitter.com/var_bincom" class="text-white">@var_bincom</a>.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    "use strict";function onBlur(e,r){return function(o){""!==o.target.value?o.target.className=e:o.target.className=e+r}}function onSubmit(e){const r=document.querySelector(".js-fname"),o=document.querySelector(".js-email");if(!r.value||!o.value){e.preventDefault();const n=r.className,a=o.className;r.className=n+" border border-danger border-3",o.className=a+" border border-danger border-3"}r.value&&(r.className="required form-control js-fname"),o.value&&(o.className="required email form-control js-email"),r.addEventListener("blur",onBlur("required form-control js-fname"," border border-danger border-3")),o.addEventListener("blur",onBlur("required email form-control js-email"," border border-danger border-3"))}function checkForm(){document.querySelector(".js-signup-form").addEventListener("submit",onSubmit)}document.addEventListener("DOMContentLoaded",checkForm);
+  </script>
+</body>
+</html>
