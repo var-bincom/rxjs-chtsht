@@ -13,8 +13,7 @@
     "sass:build": "sass --load-path=node_modules --embed-source-map ./src/scss/styles.scss ./_site/assets/css/styles.css",
     "sass:build:prod": "sass --load-path=node_modules --no-source-map ./src/scss/styles.scss ./_site/assets/css/styles.css",
     "postcss": "NODE_ENV=development postcss -w -o ./_site/assets/css/styles.css ./_site/assets/css/styles.css",
-    "postcss:prod": "NODE_ENV=production postcss -o ./_site/assets/css/styles.css ./_site/assets/css/styles.css",
-    "build": "npm-run-all clean e11y:build-prod sass:build --parallel postcss:prod"
+    "postcss:prod": "NODE_ENV=production postcss -o ./_site/assets/css/styles.css ./_site/assets/css/styles.css"
   },
   "repository": {
     "type": "git",

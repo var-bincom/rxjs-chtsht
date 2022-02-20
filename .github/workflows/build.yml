@@ -24,7 +24,9 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm i
-          npm run build
+          npm run e11y:build-prod
+          npm run sass:build:prod
+          npm run postcss:prod
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
