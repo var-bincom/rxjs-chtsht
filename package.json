@@ -1,0 +1,54 @@
+{
+  "name": "rxjs-chtsht",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./_site",
+    "e11y:build": "npm run clean && eleventy",
+    "e11y:start": "ELEVENTY_ENV=development eleventy --serve --watch",
+    "e11y:build-prod": "env NODE_ENV=production npx eleventy --pathprefix 'rxjs-chtsht'",
+    "start": "npm-run-all clean sass:build --parallel sass:watch postcss e11y:start",
+    "sass:watch": "sass --watch --load-path=node_modules --embed-source-map ./src/scss/styles.scss ./_site/assets/css/styles.css",
+    "sass:build": "sass --load-path=node_modules --embed-source-map ./src/scss/styles.scss ./_site/assets/css/styles.css",
+    "sass:build:prod": "sass --load-path=node_modules --no-source-map ./src/scss/styles.scss ./_site/assets/css/styles.css",
+    "postcss": "NODE_ENV=development postcss -w -o ./_site/assets/css/styles.css ./_site/assets/css/styles.css",
+    "postcss:prod": "NODE_ENV=production postcss -o ./_site/assets/css/styles.css ./_site/assets/css/styles.css",
+    "build": "npm-run-all sass:build --parallel postcss e11y:build-prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/var-bincom/rxjs-chtsht.git"
+  },
+  "keywords": [
+    "rxjs",
+    "javascript",
+    "reactive",
+    "programming"
+  ],
+  "author": "Vitalii Rybka, @var_bincom",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/var-bincom/rxjs-chtsht/issues"
+  },
+  "homepage": "https://github.com/var-bincom/rxjs-chtsht#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@csstools/postcss-sass": "^4.0.0",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.2.5",
+    "bootstrap": "^5.0.1",
+    "html-minifier": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.12",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-cli": "^8.3.1",
+    "postcss-csso": "^5.0.1",
+    "postcss-nested": "^5.0.5",
+    "postcss-scss": "^3.0.5",
+    "sass": "^1.32.11"
+  },
+  "dependencies": {
+    "cssnano": "^5.0.1"
+  }
+}
